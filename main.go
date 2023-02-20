@@ -17,7 +17,7 @@ func main() {
         log.Fatalf("AWS セッションエラー: %v", err)
     }
 
-    // CloudWatch Metrics API でメトリクスの一覧を取得します。
+    // CloudWatch Metrics API でメトリクスの一覧を取得
     cw := cloudwatch.NewFromConfig(cfg)
     input := &cloudwatch.ListMetricsInput{}
     result, err := cw.ListMetrics(ctx, input)
